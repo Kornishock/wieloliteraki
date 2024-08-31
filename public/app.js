@@ -1,5 +1,5 @@
 const socket = io();
-
+// test czy działa git
 // Elements
 const nameInput = document.getElementById('nameInput');
 const setNameButton = document.getElementById('setNameButton');
