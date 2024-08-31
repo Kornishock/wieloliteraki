@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Game</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #chatBox {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    #chatInput {
+      width: 80%;
+    }
+    #sendMessageButton {
+      width: 18%;
+    }
+    #chatContainer {
+      margin-top: 20px;
+    }
+    #messageList {
+      list-style: none;
+      padding: 0;
+    }
+    #messageList li {
+      margin-bottom: 5px;
+    }
+    #nameSection {
+      margin-top: 20px;
+    }
+    #playerList {
+      margin-top: 20px;
+    }
+    #gameBoard {
+      display: none;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid #000;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Word Game!</h1>
+
+  <div id="nameSection">
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="setNameButton">Set Name</button>
+    <button id="startGameButton" style="display: none;">Start Game</button>
+  </div>
+
+  <div id="playerList">
+    <h2>Players:</h2>
+    <ul id="playerList"></ul>
+  </div>
+
+  <h2>Available Letters:</h2>
+  <ul id="letterList"></ul>
+
+  <!-- Game board container -->
+  <div id="gameBoard">
+    <h2>Game Board</h2>
+    <div id="boardContainer"></div>
+  </div>
+
+  <div id="chatContainer">
+    <h2>Chat</h2>
+    <div id="chatBox"></div>
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button id="sendMessageButton">Send</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
